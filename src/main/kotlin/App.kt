@@ -98,7 +98,3 @@ fun decodeJWT(jwtString: String, body: (JWT) -> Unit) {
         showError(ERROR_DECODE_TOKEN)
     }
 }
-
-
-
-
