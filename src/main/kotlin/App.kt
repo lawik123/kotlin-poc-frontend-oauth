@@ -7,10 +7,10 @@ import kotlin.js.Date
 import kotlin.math.floor
 
 // Error constants
-const val ERROR_NO_TOKEN = "No token found "
-const val ERROR_DECODE_TOKEN = "Unable to decode token "
-const val ERROR_EXPIRED_TOKEN = "Expired token "
-const val ERROR_UNMATCHED_STATE = "Unmatched state "
+const val ERROR_NO_TOKEN = "No token found"
+const val ERROR_DECODE_TOKEN = "Unable to decode token"
+const val ERROR_EXPIRED_TOKEN = "Expired token"
+const val ERROR_UNMATCHED_STATE = "Unmatched state"
 
 // LocalStorage constants
 const val LS_STATE = "state"
@@ -72,7 +72,7 @@ fun initiateOAuth() {
 }
 
 fun showError(error: String) {
-    message.firstChild!!.nodeValue = error
+    message.firstChild!!.nodeValue = "$error "
     login.hidden = false
 }
 
@@ -94,7 +94,7 @@ fun decodeJWT(jwtString: String, body: (JWT) -> Unit) {
     try {
         val jwt = decodeJWT(jwtString)
         body(jwt)
-    } catch (e: Exception) {
+    } catch (e: Throwable) {
         showError(ERROR_DECODE_TOKEN)
     }
 }

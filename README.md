@@ -52,7 +52,7 @@ Kotlin:
 val message = document.getElementById("message") as HTMLParagraphElement
 
 fun showError(error: String) {
-    message.firstChild!!.nodeValue = error // !! assumes you are sure firstChild doesn't return null.
+    message.firstChild!!.nodeValue = "$error " // !! assumes you are sure firstChild doesn't return null.
     // ...
 }
 ```
@@ -62,7 +62,7 @@ JavaScript:
 var message = document.getElementById("message");
 
 function showError(error){
-    message.firstChild.nodeValue = error
+    message.firstChild.nodeValue = error + " "
     // ...
 }
 ```

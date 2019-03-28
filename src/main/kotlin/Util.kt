@@ -15,10 +15,14 @@ private val charPool: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
  * @return the decoded/deserialized [JWT], the signature remains base64 encoded
  */
 fun decodeJWT(jwtString: String): JWT {
-    val separated = jwtString.split(".")
-    val header = Json.parse(Header.serializer(), window.atob(separated[0]))
-    val payload = Json.parse(Payload.serializer(), window.atob(separated[1]))
-    return JWT(header, payload, separated[2])
+    try {
+        val separated = jwtString.split(".")
+        val header = Json.parse(Header.serializer(), window.atob(separated[0]))
+        val payload = Json.parse(Payload.serializer(), window.atob(separated[1]))
+        return JWT(header, payload, separated[2])
+    } catch (e: Throwable) {
+        throw e
+    }
 }
 
 /**
