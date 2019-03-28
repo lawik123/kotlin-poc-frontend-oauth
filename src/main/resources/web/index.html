@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kotlin OAuth Example</title>
+    <style>
+        #loader {
+            border: 8px solid #f3f3f3; /* Light grey */
+            border-top: 8px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Kotlin OAuth Example</h1>
+<div id="loader"></div>
+<p id="message" hidden>Token: <a id="login" href="#">click here to login</a></p>
+<script type="text/javascript" src="kotlin.js"></script>
+<script type="text/javascript" src="kotlinx-serialization-runtime-js.js"></script>
+<script type="text/javascript" src="kotlin-poc-frontend-oauth.js"></script>
+</body>
+</html>
