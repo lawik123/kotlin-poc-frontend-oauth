@@ -19,7 +19,7 @@ NOTE: It is assumed that you have basic knowledge of Kotlin, JavaScript and OAut
 
 NOTE: Due to the OAuth redirect uri, this example will only work if it runs on http://localhost:8080.
 
-NOTE: You will only be able to login in the authentication server if you have a Topicus Education KeyHub account.
+NOTE: You will only be able to login in the authorization server if you have a Topicus Education KeyHub account.
 
 ## Running the project
 1. Run the following command in the root directory of the project: `gradlew clean build`. 
