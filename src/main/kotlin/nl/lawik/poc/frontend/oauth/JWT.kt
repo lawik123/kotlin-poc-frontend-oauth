@@ -1,3 +1,5 @@
+package nl.lawik.poc.frontend.oauth
+
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

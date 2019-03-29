@@ -1,3 +1,5 @@
+package nl.lawik.poc.frontend.oauth
+
 import kotlinx.serialization.json.Json
 import kotlin.browser.window
 import kotlin.random.Random

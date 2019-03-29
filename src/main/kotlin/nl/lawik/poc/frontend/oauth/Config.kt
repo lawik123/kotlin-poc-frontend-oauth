@@ -1,3 +1,5 @@
+package nl.lawik.poc.frontend.oauth
+
 // OAuth constants
 const val AUTH_SERVER = "https://idp-acceptatie.wise-r.nl/auth"
 const val RESPONSE_TYPE = "token"

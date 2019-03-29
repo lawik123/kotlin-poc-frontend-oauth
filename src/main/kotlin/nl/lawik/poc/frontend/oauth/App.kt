@@ -1,3 +1,5 @@
+package nl.lawik.poc.frontend.oauth
+
 import kotlinx.serialization.json.Json
 import org.w3c.dom.*
 import kotlin.browser.document
